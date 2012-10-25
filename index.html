@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Conway's Game Of Life</title>
+    <link rel="stylesheet" href="gol.css" />
+    <script>
+    window.requestAnimFrame = (function(){
+      return  window.requestAnimationFrame       || 
+              window.webkitRequestAnimationFrame || 
+              window.mozRequestAnimationFrame    || 
+              window.oRequestAnimationFrame      || 
+              window.msRequestAnimationFrame     || 
+              function( callback ){
+                window.setTimeout(callback, 1000 / 60);
+              };
+    })()
+    </script>
+  </head>
+  <body>
+    <div id="gol"></div>
+    
+    <script src="foreground.js"></script>
+    <script src="background.js"></script>
+    <script src="gameground.js"></script>
+    <script src="control.js"></script>
+    <script src="gol.js" >/* Game of Life Class */</script>
+    
+    <script>
+      var gol = new Gol('gol', true /*fullscreen*/);
+    </script>
+  </body>
+</html>
