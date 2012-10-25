@@ -7,6 +7,7 @@ function Control(game){
   // Create control box
   var div = document.createElement('div');
   div.className = 'control';
+  div.style.zIndex = 10;
   container.appendChild(div);
   this.div = div;
   
