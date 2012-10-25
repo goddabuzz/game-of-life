@@ -9,6 +9,7 @@ function Foreground(game){
   
   try {
     this.canvas = document.createElement('canvas');
+    this.canvas.style.zIndex = 3;
     this.container.appendChild(this.canvas);
     this.context = this.canvas.getContext("2d");
   } catch (ex) {

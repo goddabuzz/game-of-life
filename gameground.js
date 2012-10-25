@@ -6,10 +6,10 @@
 function Gameground(game){
   this.game = game;
   this.container = game.container;
-  this.activeCells = [];
   
   try {
     this.canvas = document.createElement('canvas');
+    this.canvas.style.zIndex = 2;
     this.container.appendChild(this.canvas);
     this.activeCtx = this.canvas.getContext("2d");
     this.deadCtx = this.canvas.getContext("2d");
@@ -38,7 +38,6 @@ Gameground.prototype.draw = function(){
   var deadCtx = this.deadCtx;
   
   var cellSize = game.cellSize;
-  var count = this.activeCells.length||0;
   
   if (!game.isUpdated) return;
   

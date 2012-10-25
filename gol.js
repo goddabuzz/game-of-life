@@ -24,7 +24,7 @@ function Gol(elId, fullscreen){
   }
   
   // Later on we we try to do zoom and stufff =)
-  this.cellSize = 5;
+  this.cellSize = 10;
   this.borderSize = 0.1;
   this.speed = 100;
   
